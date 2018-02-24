@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+body, form, menu, dir, fieldset, blockquote, p, pre, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, input { padding:0; margin:0; }
+body, textarea, h1, h2, h3, h4, h5, h6 { font-family: "Microsoft YaHei"; font-weight:normal; color:#333; }
+html, body { height:100%; overflow-x:hidden;font-family: PingFang Regular；}
+button, label { cursor:pointer; }
+ ul, li, dl, dt, dd { display:block; }
+input[type=radio], input[type=checkbox] { cursor:pointer; }
+a:active { star:expression(this.onFocus=this.blur());}
+fieldset, a img { border:0; }
+li { list-style:none; }
+:focus { outline:0; }
+a { outline: none; text-decoration:none;}
+
+html{ font-size:625%;}
+
+@font-face {
+    font-family: 'PingFang Regular';
+    src: url(../font/PingFangRegular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+

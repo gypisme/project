@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>今今乐道</title>
+<meta name="MobileOptimized" content="320"/>
+<meta http-equiv="cleartype" content="on">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no" />
+<meta name="msapplication-tap-highlight" content="no"/>
+<!--
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="0">
+-->
+<link href="../css/reset.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<!--<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>-->
+<style>
+    html, body { position: relative;font-size: 14px; } 
+    body {font-family: Helvetica Neue, Helvetica, Arial, sans-serif; margin: 0; padding: 0;background-image: linear-gradient(-180deg, #3A88F7 0%, #00D4DE 99%);height: 100%;}
+    i{font-style: normal;}img{border: none;}
+    .wrap {max-width:780px;width:100%;height:auto;overflow:hidden;box-sizing: border-box;margin: 0 auto;}
+    .cf:before,.cf:after{content:""; display: block; }
+	.cf:after { clear: both;}
+	.cf { *zoom: 1; }
+    
+    
+    .lo_img{padding:15px 135px 15px 15px;margin-bottom: 10px;}
+    .lo_img img{width: 100%;height: auto;}
+    /* 开始录制 */
+    .star_l{width: 100%;height: auto;padding: 0 60px; box-sizing: border-box;text-align: center;}
+    .star_l .ldh p{font-family: HYb3gj;font-size: 20px;line-height: 28px; color: #FFFFFF; line-height: 28px;}
+    .star_l .books{font-size: 18px;color: #000;margin-top: 30px;margin-bottom: 40px;}
+    .star_l .books input{border-radius:0;outline:none;-webkit-appearance:none;background:none; width: 100%;text-align: center;height: 46px; border:none; font-size:18px; line-height:46px;color: #fff ;background:rgba(0,0,0,0.2);border-radius: 3px;}
+    
+    
+    .star_l .lz{position: relative;}
+    .star_l .lz .star_lz{font-size: 16px;color: #3A88F7;;background: #fff;display: inline-block;border-radius: 50%;line-height: 60px;padding:10px;}
+    .star_l .lz .jind{position: absolute; top: -12px;left: 32%;width: 106px;height: 106px;z-index: -1;margin: 0 auto;}
+    
+    .star_l .st_cl a{display: inline-block;}
+    .star_l .st_cl .audio{margin-bottom: 30px;}
+    .star_l .st_cl .cl_sc a{font-family: PingFangSC-Medium;font-size: 16px;width: 48%; line-height: 46px;border-radius:3px;transition: 0.5s;}
+    .star_l .st_cl .cl_sc .cxlz{float: left;border: 1px solid #fff;color: #fff;}
+    .star_l .st_cl .cl_sc .scly{float: right;border: 1px solid #fff;color: #fff;}
+    .foter{padding: 15px;margin-top: 40px;}
+    .foter dl{border: 1px solid #3A88F7;border-radius: 3px;padding: 15px;}
+    .foter dl dt{font-family: PingFangSC-Medium; font-size: 14px; color: #FFFFFF; line-height: 17px;margin-bottom: 5px;opacity: 0.9;}
+    .foter dl dd{font-family: PingFangSC-Light; font-size: 12px; color: #FFFFFF; line-height: 14px;opacity: 0.7;}
+    ::-webkit-input-placeholder{ /* WebKit browsers */
+        color: #5B98DA;
+        opacity: 0.9;
+    }
+    :-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+        color: #5B98DA;
+        opacity: 0.9;
+    }
+    ::-moz-placeholder{ /* Mozilla Firefox 19+ */
+        color: #5B98DA;
+        opacity: 0.9;
+    }
+    :-ms-input-placeholder{ /* Internet Explorer 10+ */
+        color: #5B98DA;
+        opacity: 0.9;
+    }
+</style>
+</head>
+<body>
+    <!-- content内容 -->
+    <div class="wrap">
+        <!-- 开始录音 -->
+        <div class="kaishi" style="display:block;">
+            <div class="lo_img">
+                <img src="../images/lo_imggp.png" alt="">
+            </div>
+            <div class="star_l" style="display:block;">
+                <div class="ldh">
+                    <p>摘选一段书中的话</p>
+                    <p>讲给十年前的自己</p>
+                </div>
+                <div class="books">
+                    <input type="text" value="" class="book" placeholder="请输入书名">
+                </div>
+                <div class="lz" style="display:block;">
+                    <audio id="musicc"><source src="yinpp.mp3" type="audio/mpeg">你的浏览器不支持audio标签。</audio> 
+                    <a href="javascript:;" class="star_lz">
+                    <canvas id="canvas" class="jind"></canvas>
+                    <i class="jsly">开始录音</i></a>
+                </div>
+                <!-- 上传或重录 -->
+                <div class="st_cl" style="display:none;">
+                    <div class="audio">
+                        <audio id="music"><source src="http://img.besttoptoday.com/app/res/zycx.mp3" type="audio/mpeg">你的浏览器不支持audio标签。</audio> 
+                        <a class="play">
+                            <img id="mbtn" src="../images/audio_bf.png" width="36" height="36">
+                        </a>
+                    </div>
+                    <div class="cl_sc cf">
+                        <a href="javascript:;" class="cxlz">重录</a>
+                        <a href="javascript:;" class="scly">上传</a>
+                    </div>
+                </div>
+            </div>
+            <div class="foter">
+                <dl>
+                    <dt>活动规则</dt>
+                    <dd>盼望着，盼望着，东风来了，春天的脚步近了。</dd>
+                    <dd>一切都像刚睡醒的样子，欣欣然张开了眼。山朗润起来了，水涨起来了，太阳的脸红起来了。</dd>
+                    <dd>小草偷偷地从土地里钻出来，嫩嫩的，绿绿的。园子里，田野里，瞧去，一大片一大片满是的。坐着，躺着，打两个滚，踢几脚球，赛几趟跑，捉几回迷藏。风轻俏俏的，草软绵绵的。</dd>
+                    <dd>桃树，杏树，梨树，你不让我，我不让你，都开满了花赶趟儿。红的像火，粉的像霞，白的像雪。花里带着甜味；闭了眼，树上仿佛已经满是桃儿，杏儿，梨儿。花下成千成百的蜜蜂嗡嗡的闹着，大小的蝴蝶飞来飞去。野花遍地是：杂样儿，有名字的，没名字的，散在草丛里像眼睛像星星，还眨呀眨。</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.cxlz').click(function(){
+            $(this).css({color:"#3A88F7",background:"#fff"});
+            $('.scly').css({color:"#fff",background:""})
+        });
+        $('.scly').click(function(){
+            $(this).css({color:"#3A88F7",background:"#fff"});
+            $('.cxlz').css({color:"#fff",background:""})
+        });
+        var musicc = document.getElementById('musicc');
+        musicc.addEventListener('timeupdate',function(){
+            if (!isNaN(music.duration)) {
+                var progressValue = musicc.currentTime/musicc.duration; //用时间比来获取进度条的值
+                if(progressValue == 1){
+                    progressValue=0;//当播放完成，进度条跳到开始
+                }
+                drawCircle(canvas,progressValue);
+            };
+        },false);
+        drawCircle = function (canvas, percentage) {
+            var clientWidth = document.documentElement.clientWidth;
+            var canvasWidth = Math.floor(clientWidth * 200 / 750);
+            var innerR = canvasWidth * 0.8 * 0.5;//半径
+            var ctx;
+            canvas.setAttribute('width', canvasWidth + 'px');
+            canvas.setAttribute('height', canvasWidth + 'px');
+            if (canvas.getContext) {
+                ctx = canvas.getContext('2d');
+            }
+            ctx.translate(canvasWidth / 2, canvasWidth / 2);
+            ctx.beginPath();
+            ctx.arc(0, 0, innerR, 0, Math.PI * 2, false);
+            ctx.lineWidth = 10;
+            ctx.strokeStyle = "#F0F0F0";
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(0, 0, innerR, Math.PI * 3 / 2, (Math.PI * 3 / 2 + Math.PI * 2 / 180 + percentage * Math.PI * 2), false);
+            ctx.lineWidth = 8;
+            ctx.strokeStyle = "#54CFAB";
+            ctx.stroke();
+        };
+        drawCircle(document.getElementById('canvas'),0);
+        //音频播放状态
+        function isPausedForAudio(){ var flag=false; if(music.paused) flag=true; }
+        //blo = true;
+        $('.star_lz').click(function(){
+            musicc.loop = false;
+            musicc.addEventListener('ended',function(){  
+                $('.jsly').text('开始录音');
+            }, false);
+            if(musicc.paused){
+                musicc.play(); 
+                isPausedForAudio();
+                $('.jsly').text('结束录音');
+            }else{
+                musicc.pause();    
+                isPausedForAudio();
+                $('.lz').hide();
+                $('.st_cl').show();
+            };
+        });
+        
+        fla = true;
+        $(".play").click(function(){
+            if(fla){
+                fla = false;
+                $("#mbtn").attr("src","../images/audio_zt.png");  
+            }else{
+                fla = true;
+                $("#mbtn").attr("src","../images/audio_bf.png");    
+            }    
+        });
+    </script>
+</body>
+</html>
+
+
+    

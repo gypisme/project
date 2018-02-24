@@ -1,0 +1,93 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="MobileOptimized" content="320"/>
+    <meta http-equiv="cleartype" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>  
+<body>  
+    <h2>Test Multiple Chunk Upload</h2>
+    <p>
+        <input type="file" name="uploadfile" id="uploadfile" multiple="multiple" accept="audio/*"/>
+        <br />
+        <a href="javascript:;" id="btnUpload" class="btn btn-primary">上传</a>
+    </p>
+</body>  
+</html>  
+<script type="text/javascript">  
+    $(document).ready(function () {
+        $('#btnUpload').click(function () {
+            var files = $('#uploadfile')[0].files;
+            for (var i = 0; i < files.length; i++) {
+                UploadFile(files[i]);
+            }
+        }
+        );
+    });
+
+
+    function UploadFileChunk(Chunk, FileName) {
+        var fd = new FormData();
+        fd.append('file', Chunk, FileName);
+        fd.append('UserName', 'ming.lu@genewiz.com');
+        fd.append('BusinessLine', '1');
+        fd.append('ServiceItemType', '109');
+        fd.append('Comment', 'This is order comment for GA order');
+        fd.append('UserId', '43F0FEDF-E9AF-4289-B71B-54807BCB8CD9');
+
+        $.ajax({
+            type: "POST",
+            url: 'http://localhost:50821/api/customer/GA/SaveSangerCameraOrder',
+            contentType: false,
+            processData: false,
+            data: fd,
+            success: function (data) {
+                alert(data);
+            },
+            error: function (data) {
+                alert(data.status + " : " + data.statusText + " : " + data.responseText);
+            }
+        });
+    }
+
+    function UploadFile(TargetFile) {
+        // create array to store the buffer chunks
+        var FileChunk = [];
+        // the file object itself that we will work with
+        var file = TargetFile;
+        // set up other initial vars
+        var MaxFileSizeMB = 5;
+        var BufferChunkSize = MaxFileSizeMB * (1024 * 1024);
+        var ReadBuffer_Size = 1024;
+        var FileStreamPos = 0;
+        // set the initial chunk length
+        var EndPos = BufferChunkSize;
+        var Size = file.size;
+
+        // add to the FileChunk array until we get to the end of the file
+        while (FileStreamPos < Size) {
+            // "slice" the file from the starting position/offset, to  the required length
+            FileChunk.push(file.slice(FileStreamPos, EndPos));
+            FileStreamPos = EndPos; // jump by the amount read
+            EndPos = FileStreamPos + BufferChunkSize; // set next chunk length
+        }
+        // get total number of "files" we will be sending
+        var TotalParts = FileChunk.length;
+        var PartCount = 0;
+        // loop through, pulling the first item from the array each time and sending it
+        while (chunk = FileChunk.shift()) {
+            PartCount++;
+            // file name convention
+            var FilePartName = file.name + ".part_" + PartCount + "." + TotalParts;
+            // send the file
+            UploadFileChunk(chunk, FilePartName);
+        }
+    }
+</script> 
