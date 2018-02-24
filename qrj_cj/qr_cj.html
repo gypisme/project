@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>春节活动</title>
+<meta name="MobileOptimized" content="320"/>
+<meta http-equiv="cleartype" content="on">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no" />
+<meta name="msapplication-tap-highlight" content="no"/>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-2.1.0.min.js"></script>
+<style>
+    html, body{-webkit-overflow-scrolling: touch;} 
+    body {font-size: 14px;color:#000; margin: 0; padding: 0;max-width: 780px;margin: 0 auto;} 
+    .wrap{width: 100%;height: 100%;box-sizing: border-box;margin: 0 auto;max-width: 780px;background: url(images/sy_bj.png) left top no-repeat;background-size: 100% 100%;overflow: hidden;}
+    i{font-style: normal;}
+    .cf:before,.cf:after { content: ""; display: block; }
+	.cf:after { clear: both;}
+	.cf { *zoom: 1;}
+    a{text-decoration: none;}
+    ::-webkit-input-placeholder{ /* WebKit browsers */
+        color: #999999;
+        opacity: 1;
+    }
+    :-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+        color: #999999;
+        opacity: 1;
+    }
+    ::-moz-placeholder{ /* Mozilla Firefox 19+ */
+        color: #999999;
+        opacity: 1;
+    }
+    :-ms-input-placeholder{ /* Internet Explorer 10+ */
+        color: #999999;
+        opacity: 1;
+    }
+    .wrap .sy_m{width: 100%;height: auto;box-sizing: border-box;position: relative;z-index: 22;}
+    .wrap .jjl_d{width: 100%;height: auto;box-sizing: border-box;position: relative;}
+    .wrap .jjl_d .sy_dt{width: 100%;height: auto;display: block;border: none;}
+    .wrap .jjl_d .sb_lg{width: 180px;height: auto;display: block;border: none;position: absolute;top: -3px;right: 3px;}
+    
+    .wrap .b_inp{width: 100%;height: auto;box-sizing: border-box;padding: 0 65px;text-align: center;margin: 60px auto;}
+    .wrap .b_inp input{background: none;border: none;line-height: 40px;width: 100%;height: auto;text-align: center;font-size: 18px;border: 1px solid red;border-radius: 5px;}
+    .wrap .anniu{width: 100%;height: auto;box-sizing: border-box;padding: 0 85px;position: relative;}
+    .wrap .anniu .dc_jfb{display: inline-block;}
+    .wrap .anniu .dc_jfb img{width: 100%;height: auto;display: block;}
+    
+    
+    
+    
+    .tc_con{width: 100%;height: 100%;background: rgba(0,0,0,0.6);position: fixed;left: 0;top: 0;z-index: 999;}
+        .tc_con .jzdh{width: 100%;height: auto;position: relative;padding: 0 15px;box-sizing: border-box;top: 20%;}
+        .tc_con .jzdh img{width: 100%;height: auto;display: block;z-index: 3;}
+        .tc_con .jzdh .xdd{width: 100%;height: auto;text-align: center; position: absolute;bottom: 24%;color: #cc0033;margin-left: -12px;}
+        @-webkit-keyframes scale { 0% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; } 45% { -webkit-transform: scale(0.1); transform: scale(0.1); opacity: 0.7; } 80% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; } } @keyframes scale { 0% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; } 45% { -webkit-transform: scale(0.1); transform: scale(0.1); opacity: 0.7; } 80% { -webkit-transform: scale(1); transform: scale(1); opacity: 1;}}
+        .ball-pulse > span{
+          -webkit-animation: scale 0.75s 0s infinite cubic-bezier(.2, .68, .18, 1.08);
+                  animation: scale 0.75s 0s infinite cubic-bezier(.2, .68, .18, 1.08); }
+        .ball-pulse > span:nth-child(1) {
+          -webkit-animation: scale 0.75s 0.36s infinite cubic-bezier(.2, .68, .18, 1.08);
+                  animation: scale 0.75s 0.36s infinite cubic-bezier(.2, .68, .18, 1.08); }
+        .ball-pulse > span:nth-child(2) {
+          -webkit-animation: scale 0.75s 0.48s infinite cubic-bezier(.2, .68, .18, 1.08);
+                  animation: scale 0.75s 0.48s infinite cubic-bezier(.2, .68, .18, 1.08); }
+        .ball-pulse > span:nth-child(3) {
+          -webkit-animation: scale 0.75s 0.60s infinite cubic-bezier(.2, .68, .18, 1.08);
+                  animation: scale 0.75s 0.60s infinite cubic-bezier(.2, .68, .18, 1.08); }
+        .ball-pulse > span:nth-child(4) {
+          -webkit-animation: scale 0.75s 0.72s infinite cubic-bezier(.2, .68, .18, 1.08);
+                  animation: scale 0.75s 0.72s infinite cubic-bezier(.2, .68, .18, 1.08); }
+        .ball-pulse > span:nth-child(5) {
+          -webkit-animation: scale 0.75s 0.84s infinite cubic-bezier(.2, .68, .18, 1.08);
+                  animation: scale 0.75s 0.84s infinite cubic-bezier(.2, .68, .18, 1.08); }
+        .ball-pulse > span:nth-child(6) {
+          -webkit-animation: scale 0.75s 0.96s infinite cubic-bezier(.2, .68, .18, 1.08);
+                  animation: scale 0.75s 0.96s infinite cubic-bezier(.2, .68, .18, 1.08); }
+        .ball-pulse > span{
+          background-color: #cc0033;
+          width: 3px;
+          height: 3px;
+          border-radius: 100%;
+          margin: 3px;
+          -webkit-animation-fill-mode: both;
+                  animation-fill-mode: both;
+          display: inline-block;}
+        
+        @media all{ 
+        .masked{
+            width: 100%;text-align: center;
+            margin-left: -12px;
+            position: absolute;
+            bottom: -30px;
+             font-size: 22px;
+            background-image: -webkit-linear-gradient(left, #fff, #cc0033 25%, #fff 50%, #cc0033 75%, #fff);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-background-size: 200% 100%;
+            -webkit-animation: masked-animation 5s infinite linear;
+            }
+        }
+        @-webkit-keyframes masked-animation {
+            0%  { background-position: 0 0;}
+            100% { background-position: -100% 0;}
+        }
+        
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="sy_m" style="display:block;">
+            <div class="jjl_d cf">
+                <img src="images/xdl.png" alt="" class="sy_dt">
+                <img src="images/xdlg.png" alt="" class="sb_lg">
+            </div>
+            <div class="b_inp">
+                <input type="text" value="" placeholder="请输入您的姓名" class="ta_name" maxlength="6" onblur="hechen()">
+            </div>
+            <div class="anniu">
+                <a href="javascript:;" class="dc_jfb"><img src="images/dcjf.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="tc_con" style="display:block;">
+        <div class="jzdh">
+            <img src="images/tccc.png" alt="">
+            <p class="xdd">
+                <span class="loader-inner ball-pulse">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </p>
+            <p class="masked">l o a d i n g <br>. . .</p>
+        </div>
+    </div>
+    <style>
+        .fxbc{width: 100%;height: 100%;padding: 0 50px;box-sizing: border-box;position: fixed;left: 0;top: 0;background: rgba(0,0,0,0.5);z-index: 999;}
+        .fxbb{width: 100%;height: auto;position: relative;left: 0;top: 0;z-index: 9999;}
+        .ccs{width: 100%;height: 100%;position: fixed;}
+        #cws{width: 100%;height: auto;display: block;border: none;position: absolute;z-index: 999999;opacity: 0;bottom: 0;}
+        .xians{width: 100%;height: auto;display: block;border: none;}
+        .yh_tx{width: 44px;height: auto;border: 2px solid #D97C9B;border-radius: 100%;position: absolute;left: 22%;top: 5.2%;}
+        .yh_tx img{width: 100%;height: auto;border-radius: 100%;display: block;}
+        .df_name{width: 50%;font-size:14px;font-family: SimSun;color: #666666;position: absolute;right:13.5%;top: 7.6%;text-align: center;}
+        .erwm{width: 100%;height: auto;position: absolute;left: 0;bottom: 14.4%;}
+        .erwm img{width: 60px;height: auto;display: block;border: none;margin: 0 auto;}
+        .zw_yc{display: inline-block;width: 100%;height: auto;padding: 0 60px;position: absolute;bottom: 5.5%;box-sizing: border-box;z-index: 9999999;}
+        .zw_yc img{width: 100%;height: auto;display: block;border: none;}
+    </style>
+    <div class="fxbc" style="display:none;">
+        <div class="fxbb">
+            <div class="ccs">
+                <img src="" alt="" id="cws">
+            </div>
+            <img src="images/bqcl.jpg" alt="" class="xians">
+            <div class="yh_tx">
+                <img src="images/aa.jpg" alt="">
+            </div>
+            <p class="df_name">我就是我</p>
+            <div class="erwm">
+                <img src="images/aqr.jpg" alt="">
+            </div>
+            <a href="javascript:;" class="zw_yc"><img src="images/dcjf.png" alt=""></a>
+        </div>
+    </div>
+    <canvas id="myCanvas" width="750" height="1334" style="border:1px solid #d3d3d3;display:none;">
+您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    <script>
+        var u = navigator.userAgent, app = navigator.appVersion;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if(isiOS && screen.height == 812){
+            $('#cws').css("margin-top","12%");
+            $('.fxbc').css("padding","0 15px");
+            $('.zw_yc').css("padding","0 80px");
+        };
+        var c=document.getElementById("myCanvas");
+        var ctx=c.getContext("2d");
+        var img=new Image();  
+        function hechen(){
+            img.onload=function(){};  
+            img.onerror=function(){};  
+            img.src="images/b.jpg";
+            //function show(){};  
+            //window.onload=show;  
+
+
+            var img_head=new Image();  
+            img_head.onload=function(){};  
+            img_head.onerror=function(){}; 
+            img_head.src="${obj.head_img}";  
+            img_head.src="https://pic3.zhimg.com/80/v2-e2ae9159cf260da0ae61951bf1926abe_hd.jpg";
+            img_head.src="images/aa.jpg";
+            //function show(){};  
+            //window.onload=show;  
+
+            var img_qr=new Image();  
+            img_qr.onload=function(){};  
+            img_qr.onerror=function(){};  
+            img_qr.src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=151721" +
+                    "6896438&di=4ae65e455700196c973eb795eac24760&imgtype=0&src=http%3A%2F%2Fimgsr" +
+                    "c.baidu.com%2Fforum%2Fw%253D580%2Fsign%3D53aca9868718367aad897fd51e718b68%2F" +
+                    "513d269759ee3d6db606e36442166d224e4ade59.jpg";  
+            img_qr.src="images/aqr.jpg";
+            //function show(){};  
+            //window.onload=show; 
+            var str = $('.ta_name').val();
+            
+            img.onload = function() {
+                if (str.length == 6 ) {
+                    str = "     " + str;
+                }
+                if (str.length == 5 ) {
+                    str = "     " + str;
+                }
+                if (str.length == 4 ) {
+                    str = "      " + str;
+                }
+                if (str.length == 3 ) {
+                    str = "       " + str;
+                }
+                if (str.length == 2 ) {
+                    str = "        " + str;
+                }
+                if (str.length == 1 ) {
+                    str = "          "+str;
+                }
+                ctx.drawImage(img,0,0);
+                ctx.font="36px SimSun";
+                //ctx.fillStyle  = 'red';
+                ctx.fillText(str,265,126);
+                //拼头像
+                ctx.save(); // 保存当前ctx的状态
+                ctx.beginPath();
+                ctx.arc(250, 130, 62, 0, 2*Math.PI);
+                ctx.lineWidth=5;
+                //ctx.strokeStyle="#E07984";//新年
+                ctx.strokeStyle="#D97C9B";//情人节
+                ctx.stroke();
+                ctx.clip(); //裁剪上面的圆形
+                ctx.drawImage(img_head, 185, 65, 124, 124); // 在刚刚裁剪的园上画图
+                ctx.restore(); // 还原状态
+
+                ctx.drawImage(img_qr, 285, 1033, 180, 180);
+
+            };
+        };
+        hechen();
+        $('.dc_jfb').click(function(){
+            $('.ta_name').blur();
+            var name = $('.ta_name').val();
+            if(name == ''){
+                $('.ta_name').focus();
+            }else{
+                $('.df_name').text($('.ta_name').val());
+                $('.tc_con').show();
+                $('.ta_name').blur();
+                setTimeout(function(){
+                    var cws=document.getElementById("cws");
+                    var srcwd = c.toDataURL();
+                    cws.src = srcwd; 
+                },500);
+                setTimeout(function(){
+                    $('.tc_con').hide();
+                    $('.fxbc').show();
+                },2000)
+            };
+        });
+        $('.zw_yc').click(function(){
+            $('.fxbc').hide();
+        });
+    </script>
+</body>
+</html>

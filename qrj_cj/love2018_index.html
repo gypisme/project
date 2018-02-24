@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+    
+.small-heart{ /* 基础样式 */ position: absolute; width: 20px; height: 20px; background-color: #ff1414; /* 旋转 */ -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); } /* before和after的基础样式*/ .small-heart:before,.small-heart:after{ position: absolute; content: ''; width: 20px; height: 20px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; background-color: #ff1414; } /* before的增强样式 */ 
+.small-heart:before{ bottom: 0; left: -50%; } /* after的增强样式 */ .small-heart:after{ top: -50%; right: 0; } /* before的增强样式 */ .heart-shape:before{ bottom: 0; left: -50px; /* 动画 */ -webkit-animation: heart-left 6s; /* Safari 和 Chrome */ -moz-animation: heart-left 6s; /* Firefox */ -o-animation: heart-left 6s; /* Opera */ animation: heart-left 6s; /* 规定动画播放次数 infinite为无限循环*/ -webkit-animation-iteration-count:infinite; /* Safari 和 Chrome */ animation-iteration-count:infinite; } /* after的增强样式 */ 
+.heart-shape:after{ top: -50px; right: 0; /* 动画 */ -moz-animation: heart-right 6s; /* Firefox */ -webkit-animation: heart-right 6s; /* Safari 和 Chrome */ -o-animation: heart-right 6s; /* Opera */ animation: heart-right 6s; /* 规定动画播放次数 infinite为无限循环*/ -webkit-animation-iteration-count:infinite; /* Safari 和 Chrome */ animation-iteration-count:infinite; } /* 左心室动画 */ @keyframes heart-left { 0% {bottom: 0;left: -50%;} 25% {bottom: 0;left: 50%;} 50% {bottom: 0;left: 50%;} 75% {bottom: 0;left: -50%;} } /* 右心室动画 */ @keyframes heart-right { 25% {top: -50%;right: 0;} 50% {top: 50%;right: 0;} 75% {top: 50%;right: 0;} 100% {top: -50%;right: 0;} } /* Firefox */ @-moz-keyframes heart-left { 0% {bottom: 0;left: -50%;} 25% {bottom: 0;left: 50%;} 50% {bottom: 0;left: 50%;} 75% {bottom: 0;left: -50%;} } /* Safari 和 Chrome */ @-webkit-keyframes heart-left { 0% {bottom: 0;left: -50%;} 25% {bottom: 0;left: 50%;} 50% {bottom: 0;left: 50%;} 75% {bottom: 0;left: -50%;} } /* Opera */ @-o-keyframes heart-left { 0% {bottom: 0;left: -50%;} 25% {bottom: 0;left: 50%;} 50% {bottom: 0;left: 50%;} 75% {bottom: 0;left: -50%;} } /* 右边 */ @keyframes heart-right { 25% {top: -50%;right: 0;} 50% {top: 50%;right: 0;} 75% {top: 50%;right: 0;} 100% {top: -50%;right: 0;} } /* Firefox */ @-moz-keyframes heart-right { 25% {top: -50%;right: 0;} 50% {top: 50%;right: 0;} 75% {top: 50%;right: 0;} 100% {top: -50%;right: 0;} } /* Safari 和 Chrome */ @-webkit-keyframes heart-right { 25% {top: -50%;right: 0;} 50% {top: 50%;right: 0;} 75% {top: 50%;right: 0;} 100% {top: -50%;right: 0;} } /* Opera */ @-o-keyframes heart-right { 25% {top: -50%;right: 0;} 50% {top: 50%;right: 0;} 75% {top: 50%;right: 0;} 100% {top: -50%;right: 0;} } .heart-shape{ /* 基础样式 */ position: relative; width: 100px; height: 100px; background-color: #ff1414; /* 旋转 */ -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); } /* before和after的基础样式*/ .heart-shape:before,.heart-shape:after{ position: absolute; content: ''; width: 100px; height: 100px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; background-color: #ff1414; } /* before的增强样式 */ .heart-shape:before{ bottom: 0; left: -50px; } /* after的增强样式 */ .heart-shape:after{ top: -50px; right: 0; }
+    </style>
+</head>
+
+<body>
+<div id="bgCanvas">
+            <div class="heart-shape"></div>
+        </div>
+ <script>
+         var breakHeart = document.getElementsByClassName('heart-shape')[0];
+
+var bgCanvas = document.getElementById('bgCanvas');
+
+this.addEventListener('click',function(e){
+    //随机数
+    var randomNum = Math.round(Math.random()*50);
+
+    for (var i =0;i < randomNum; i++) {
+        //创建小心形
+        var smallHeart = document.createElement('div');
+
+        var rNum = Math.round(Math.random()*50);
+        //添加类名
+        smallHeart.className='small-heart';
+        //插入到页面中
+        bgCanvas.appendChild(smallHeart);
+        //每次旋转不同角度
+        smallHeart.style.transform ='rotate('+ rNum+'deg)';
+
+        smallHeart.style.left = 160+2*rNum*9+'px';
+        smallHeart.style.top = 100+rNum*i+'px';
+    }
+
+    breakHeart.style.display = 'none';
+
+},false)
+    </script>
+
+
+
+<canvas id="myCanvas" width="750" height="1334" style="border:1px solid #d3d3d3;">
+您的浏览器不支持 HTML5 canvas 标签。</canvas>
+<script>
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var img=new Image();  
+img.onload=function(){};  
+img.onerror=function(){};  
+img.src="images/a.jpg";
+//function show(){};  
+//window.onload=show;  
+var img_head=new Image();  
+img_head.onload=function(){};  
+img_head.onerror=function(){}; 
+img_head.src="${obj.head_img}";  
+img_head.src="https://pic3.zhimg.com/80/v2-e2ae9159cf260da0ae61951bf1926abe_hd.jpg";
+img_head.src="images/aa.jpg";
+//function show(){};  
+//window.onload=show;  
+var img_qr=new Image();  
+img_qr.onload=function(){};  
+img_qr.onerror=function(){};  
+img_qr.src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=151721" +
+		"6896438&di=4ae65e455700196c973eb795eac24760&imgtype=0&src=http%3A%2F%2Fimgsr" +
+		"c.baidu.com%2Fforum%2Fw%253D580%2Fsign%3D53aca9868718367aad897fd51e718b68%2F" +
+		"513d269759ee3d6db606e36442166d224e4ade59.jpg";  
+img_qr.src="images/aqr.jpg";
+//function show(){};  
+//window.onload=show; 
+var str = "林贝我阿";
+
+if (str.length == 6 ) {
+	str = "     " + str;
+}
+if (str.length == 5 ) {
+	str = "     " + str;
+}
+if (str.length == 4 ) {
+	str = "      " + str;
+}
+if (str.length == 3 ) {
+	str = "       " + str;
+}
+if (str.length == 2 ) {
+	str = "        " + str;
+}
+if (str.length == 1 ) {
+	str = "          "+str;
+}
+img.onload = function() {
+	ctx.drawImage(img,0,0);
+	ctx.font="38px SimSun";
+	//ctx.fillStyle  = 'red';
+	ctx.fillText(str,265,121);
+	//拼头像
+	ctx.save(); // 保存当前ctx的状态
+	ctx.beginPath();
+	ctx.arc(170, 140, 60, 0, 2*Math.PI);
+	ctx.lineWidth=10;
+	//ctx.strokeStyle="#E07984";//新年
+	ctx.strokeStyle="#D97C9B";//情人节
+	ctx.stroke();
+	ctx.clip(); //裁剪上面的圆形
+	ctx.drawImage(img_head, 110, 80, 120, 120); // 在刚刚裁剪的园上画图
+	ctx.restore(); // 还原状态
+	ctx.drawImage(img_qr, 290, 1075, 167, 167);
+} 
+</script>
+
+</body>
+</html>

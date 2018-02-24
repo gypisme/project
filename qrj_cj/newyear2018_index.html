@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="js/jquery-2.1.0.min.js"></script>
+</head>
+<body>
+<div class="index">
+    <p class="pp"></p>
+</div>
+<canvas id="myCanvas" width="750" height="1334" style="border:1px solid #d3d3d3;display:none;">
+您的浏览器不支持 HTML5 canvas 标签。</canvas>
+
+<script>
+//    $.ajaxSetup({
+//        async:false//取消异步&nbsp;&nbsp;
+//    });
+//    var dizhi=''; $.get("http://ttts.besttoptoday.com/barcode/bqlisttry",function(data){
+//         var djson = eval('('+data+')');
+////         dizhi = json.url;
+//        console.log(json);
+//    });
+$.ajax({
+		type:'POST',
+		dataType: "json",
+		url:'http://ttts.besttoptoday.com/barcode/bqlisttry',
+		async:true,
+		success:function(data){
+            alert(222);
+		}
+	});;
+    $.getJSON("(http://ttts.besttoptoday.com/barcode/bqlisttry)", {
+        
+        }, function(json) {
+        console.log(json);                
+        //在这里面处理获得的数据
+    });
+    
+    
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+var img=new Image();  
+img.onload=function(){};  
+img.onerror=function(){};  
+img.src="images/b.jpg";
+//function show(){};  
+//window.onload=show;  
+
+
+var img_head=new Image();  
+img_head.onload=function(){};  
+img_head.onerror=function(){}; 
+img_head.src="${obj.head_img}";  
+img_head.src="https://pic3.zhimg.com/80/v2-e2ae9159cf260da0ae61951bf1926abe_hd.jpg";
+img_head.src="images/aa.jpg";
+//function show(){};  
+//window.onload=show;  
+
+var img_qr=new Image();  
+img_qr.onload=function(){};  
+img_qr.onerror=function(){};  
+img_qr.src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=151721" +
+		"6896438&di=4ae65e455700196c973eb795eac24760&imgtype=0&src=http%3A%2F%2Fimgsr" +
+		"c.baidu.com%2Fforum%2Fw%253D580%2Fsign%3D53aca9868718367aad897fd51e718b68%2F" +
+		"513d269759ee3d6db606e36442166d224e4ade59.jpg";  
+img_qr.src="images/aqr.jpg";
+//function show(){};  
+//window.onload=show; 
+var str = "林贝我";
+
+if (str.length == 6 ) {
+	str = "     " + str;
+}
+if (str.length == 5 ) {
+	str = "     " + str;
+}
+if (str.length == 4 ) {
+	str = "      " + str;
+}
+if (str.length == 3 ) {
+	str = "       " + str;
+}
+if (str.length == 2 ) {
+	str = "        " + str;
+}
+if (str.length == 1 ) {
+	str = "          "+str;
+}
+
+img.onload = function() {
+	ctx.drawImage(img,0,0);
+	ctx.font="36px SimSun";
+	//ctx.fillStyle  = 'red';
+	ctx.fillText(str,265,126);
+	
+	//拼头像
+	ctx.save(); // 保存当前ctx的状态
+	ctx.beginPath();
+	ctx.arc(250, 130, 62, 0, 2*Math.PI);
+	ctx.lineWidth=5;
+	//ctx.strokeStyle="#E07984";//新年
+	ctx.strokeStyle="#D97C9B";//情人节
+	ctx.stroke();
+	ctx.clip(); //裁剪上面的圆形
+	ctx.drawImage(img_head, 185, 65, 124, 124); // 在刚刚裁剪的园上画图
+	ctx.restore(); // 还原状态
+	
+	ctx.drawImage(img_qr, 285, 1033, 180, 180);
+	
+} 
+
+
+
+
+
+</script>
+
+</body>
+</html>

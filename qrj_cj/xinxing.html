@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+    *{margin: 0;padding: 0;}
+    body{background: rgba(0,0,0,0.5);}
+    .img{background: url(images/jiazai.png) center center no-repeat;background-size: 100% 100%;width: 673px;height: 645px;margin: 0 auto;position: relative;}
+    .img2{position:absolute;transition: all 0.35s;clip:rect(645px 673px 645px 0px)}
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+    .masked{
+            width: 100%;text-align: center;
+            margin-left: -12px;
+            font-size: 36px;
+            position: absolute;
+            bottom: 0px;
+            background-image: -webkit-linear-gradient(left, #fff, #cc0033 25%, #fff 50%, #cc0033 75%, #fff);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-background-size: 200% 100%;
+            -webkit-animation: masked-animation 5s infinite linear;
+            }
+        }
+        @-webkit-keyframes masked-animation {
+            0%  { background-position: 0 0;}
+            100% { background-position: -100% 0;}
+        }
+</style>
+</head>
+<body>
+<div class="img">
+    <img src="images/jiazaiz.png" alt="" class="img2" id="img2">
+    <p class="masked">l o a d i n g</p>
+</div>
+<script>
+    var img2 = document.getElementById("img2");
+    var dizeng =645;
+    function djs(){
+        time = setInterval(function(){
+            dizeng-=20;
+            img2.style.clip="rect("+dizeng+"px,673px,645px,0px)";
+            if(dizeng <= 0){
+               clearInterval(time);
+               };
+        },500);
+    };
+    djs();
+</script>
+</body>
+</html>

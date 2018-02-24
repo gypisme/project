@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>情人节给TA来一张爱的表白</title>
+<meta name="MobileOptimized" content="320"/>
+<meta http-equiv="cleartype" content="on">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no" />
+<meta name="msapplication-tap-highlight" content="no"/>
+<link href="../css/reset.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery-2.1.0.min.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+
+wx.config({
+    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId: '${obj.appId?!''}', // 必填，企业号的唯一标识，此处填写企业号corpid
+    timestamp: ${obj.timestamp?!''}, // 必填，生成签名的时间戳
+    nonceStr: '${obj.nonceStr?!''}', // 必填，生成签名的随机串
+    signature: '${obj.signature?!''}',// 必填，签名，见附录1
+    jsApiList: [ 
+	            'onMenuShareTimeline', 
+	            'onMenuShareAppMessage', 
+	            ]  // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+});
+
+wx.ready(function () {
+//分享到朋友圈
+wx.onMenuShareTimeline({
+    title: '情人节给TA来一张爱的表白', // 分享标题
+    link: 'http://paytest.besttoptoday.com/wg/love2018/love_login', // 分享链接，该链接域名必须与当前企业的可信域名一致
+    imgUrl: 'http://dgtt.besttoptoday.com/series/list/20182/xFZz2AMp7J.jpg', // 分享图标
+    success: function () {
+        // 用户确认分享后执行的回调函数
+    },
+    cancel: function () {
+        // 用户取消分享后执行的回调函数
+    }
+});
+
+//分享到朋友
+wx.onMenuShareAppMessage({
+    title: '情人节给TA来一张爱的表白', // 分享标题
+    desc: '生成一张你的表白贴', // 分享描述
+    link: 'http://paytest.besttoptoday.com/wg/love2018/love_login', // 分享链接，该链接域名必须与当前企业的可信域名一致
+    imgUrl: 'http://dgtt.besttoptoday.com/series/list/20182/xFZz2AMp7J.jpg', // 分享图标
+    type: '', // 分享类型,music、video或link，不填默认为link
+    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+    success: function () {
+        // 用户确认分享后执行的回调函数
+    },
+    cancel: function () {
+        // 用户取消分享后执行的回调函数
+    }
+});
+});
+</script>
+	
+	
+
+
+<style>
+    html, body{-webkit-overflow-scrolling: touch;} 
+    body {font-size: 14px;color:#000; margin: 0; padding: 0;max-width: 780px;margin: 0 auto;background: url(../images/sy_bj.png) left top no-repeat;background-size: 100% 100%; overflow-x: hidden;
+ overflow-y: auto;} 
+    .wrap{width: 100%;height: 100%;box-sizing: border-box;margin: 0 auto;max-width: 780px;}
+    i{font-style: normal;}
+    .cf:before,.cf:after{content:""; display: block; }
+	.cf:after {clear: both;}
+	.cf { *zoom: 1;}
+    a{text-decoration: none;}
+    ::-webkit-input-placeholder{ /* WebKit browsers */
+        color: #999999;
+        opacity: 1;
+    }
+    :-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+        color: #999999;
+        opacity: 1;
+    }
+    ::-moz-placeholder{ /* Mozilla Firefox 19+ */
+        color: #999999;
+        opacity: 1;
+    }
+    :-ms-input-placeholder{ /* Internet Explorer 10+ */
+        color: #999999;
+        opacity: 1;
+    }
+    .wrap .sy_m{width: 100%;height: auto;box-sizing: border-box;position: relative;z-index: 22;}
+    .wrap .jjl_d{width: 100%;height: auto;box-sizing: border-box;position: relative;}
+    .wrap .jjl_d .sy_dt{width: 100%;height: auto;display: block;border: none;}
+    .wrap .x_xx{width: 80px;height: auto;display: block;border: none;}
+
+    .wrap .xin{width: 100%;height: auto;box-sizing: border-box;padding: 30px 80px 0 15px;position: relative;margin-top: 50px;}
+    .wrap .b_inp{width: 100%;height: auto;box-sizing: border-box;background: url(../images/sr_mz.png) center center no-repeat;padding: 0 45px;background-size: 100% 100%;}
+    .wrap .b_inp input{background: none;border: none;line-height: 40px;width: 100%;height: auto;text-align: center;font-size: 18px;}
+    .wrap .xin .x_qh{width: 200px;height: auto;display: block;border: none;margin-left: -8px;}
+    .wrap .anniu{width: 100%;height: auto;box-sizing: border-box;padding: 0 85px;padding-top: 65px;position: relative;}
+    .wrap .anniu .sc_bbt{display: inline-block;}
+    .wrap .anniu .sc_bbt img{width: 100%;height: auto;display: block;}
+    .wrap .anniu .xixin{width: 100%;height: auto; position: absolute;left: 20px; top: 10px;}
+    .wrap .anniu .xixin img{width: 120px;height: auto;display: block;border: none;margin: 0 auto;}
+    
+    .x_xf{position: absolute;right: 15.5%;top: 80%;}
+    .x_xf{ animation:xc 3s linear infinite;-webkit-animation:xc 3s linear infinite;}
+    @-webkit-keyframes xc{
+        0%  {right:15.5%; top:80%;}
+        50% {right:16%; top:79.5%;}
+        100%{ right:15.5%; top:80%;}
+    };
+    .xixin{position: absolute;left: 20px; top: 5px;}
+    .xixin{ animation:xxc 3s linear infinite;-webkit-animation:xxc 3s linear infinite;}
+    @-webkit-keyframes xxc{
+        0%  {left: 20px; top: 5px;}
+        50% {left: 16px; top: 7px;}
+        100%{left: 20px; top: 5px;}
+    };
+    
+    
+</style>
+</head>
+<body>
+    <div class="wrap" style="display:block;">
+        <div class="sy_m" style="display:block;">
+            <div class="jjl_d cf">
+                <img src="../images/qrj_sy.png" alt="" class="sy_dt">
+                <div class="x_xf">
+                    <img src="../images/yd_xxx.png" alt="" class="x_xx">
+                </div>
+            </div>
+            <div class="xin">
+                <div class="b_inp">
+                    <input type="text" placeholder="请输入TA的名字" class="ta_name" maxlength="6" >
+                </div>
+                <div class="bb_qh">
+                    <img src="../images/bb_qh.png" alt="" class="x_qh">
+                </div>
+            </div>
+            <div class="anniu">
+                <div class="xixin">
+                    <img src="../images/an_xx.png" alt="">
+                </div>
+                <a href="javascript:;" class="sc_bbt"><img src="../images/bb_an.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    
+    
+     <style>
+        .tc_con{width: 100%;height: 100%;background: rgba(0,0,0,0.6);position: fixed;left: 0;top: 0;z-index: 999;}
+        .img_jz{background: url(../images/jiazai.png) center center no-repeat;background-size: 100% 100%;width: 300px;height: 288px;margin: 0 auto;position: relative;top: 20%;}
+        .img_jz2{width: 300px;height: 288px; position:absolute; transition: all 0.35s;  clip:rect(288px 300px 288px 0px);display: block;}
+        @media all{ 
+        .masked{
+                width: 100%;
+                text-align: center;
+                font-size: 22px;
+                position: absolute;
+                bottom: -50px;
+                background-image: -webkit-linear-gradient(left, #fff, #cc0033 25%, #fff 50%, #cc0033 75%, #fff);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                -webkit-background-size: 200% 100%;
+                -webkit-animation: masked-animation 5s infinite linear;
+                }
+            }
+            @-webkit-keyframes masked-animation {
+                0%  { background-position: 0 0;}
+                100% { background-position: -100% 0;}
+            }
+    </style>
+    <div class="tc_con" style="display:none;">
+        <div class="img_jz">
+            <img src="../images/jiazaiz.png" alt="" class="img_jz2" id="img_jz2">
+            <p class="masked">l o a d i n g<br>. . .</p >
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <style>
+        .fxbc{width: 100%;height: 100%;padding: 0 50px;box-sizing: border-box;position: fixed;left: 0;top: 0;background: rgba(0,0,0,0.5);z-index: 999;}
+        .fxbb{width: 100%;height: auto;position: relative;left: 0;top: 0;z-index: 9999;}
+        .ccs{width: 100%;height: 100%;position: fixed;}
+        #cws{width: 100%;height: auto;display: block;border: none;position: absolute;z-index: 999999;opacity: 0;bottom: 0;}
+        .xians{width: 100%;height: auto;display: block;border: none;}
+        .yh_tx{width: 50px;height: auto;border: 2px solid #D97C9B;border-radius: 100%;position: absolute;left: 13%;top: 4.4%;}
+        .yh_tx img{width: 100%;height: auto;border-radius: 100%;display: block;}
+        .df_name{width: 50%;font-size:14px;font-family: SimSun;color: #666666;position: absolute;right:13.5%;top: 5.7%;text-align: center;}
+        .erwm{width: 100%;height: auto;position: absolute;left: 0;bottom: 14.3%;}
+        .erwm img{width: 25%;height: auto;display: block;border: none;margin: 0 auto;}
+        .zw_yc{display: inline-block;width: 100%;height: auto;padding: 0 80px;position: absolute;bottom: 5.5%;box-sizing: border-box;z-index: 9999999;}
+        .zw_yc img{width: 100%;height: auto;display: block;border: none;}
+    </style>
+    <div class="fxbc" style="display:none;">
+        <div class="fxbb">
+            <div class="ccs">
+                <img src="" alt="" id="cws">
+            </div>
+            <img src="${obj.bjpic?!'http://dgtt.besttoptoday.com/series/list/20182/zeZiiZpJy6.png'}" alt="" class="xians">
+            <div class="yh_tx">
+                <img src="${obj.head_img?!'http://dgtt.besttoptoday.com/series/list/20182/KBahCTZtaB.png'}" alt="">
+            </div>
+            <p class="df_name"></p>
+            <div class="erwm">
+                <img src="http://dgtt.besttoptoday.com/series/list/20182/S7c6ndjYxM.png" alt="">
+            </div>
+            <a href="javascript:;" class="zw_yc"><img src="../images/zwyc.png" alt=""></a>
+        </div>
+    </div>
+    <canvas id="myCanvas" width="750" height="1334" style="border:1px solid #d3d3d3;display:none;">您的浏览器不支持 HTML5 canvas 标签。</canvas>
+<script>  
+var percent = 288;
+var img_jz2 = document.getElementById("img_jz2");
+var dizeng =288;
+function djs(){
+    time = setInterval(function(){
+    	//if (percent == 100) { 
+        //心形动画加载卡顿早会开启模式
+        //刚开始只是设置了一个每隔一秒让rect的Y轴-30px;所以红色动画会有卡顿，
+        //修改后把rect动画效果和canvas生成的图片数量绑定，同步进行
+    		if(dizeng>percent)
+                //如果定义的dizeng的值大于合成图片中的percent的值
+    			dizeng-=20;//就让动画开始执行-=20；
+    		if(dizeng<0)
+    			dizeng = 0;
+    		img_jz2.style.clip="rect("+dizeng+"px,300px,288px,0px)";
+    		if(dizeng <= 0){
+            	setTimeout (function () {
+                    $('.tc_con').hide();
+                    $('.fxbc').show(); 
+                    clearInterval(time);
+            	},200); 
+                
+            };
+    	//}
+    },100);
+};
+
+
+
+
+var u = navigator.userAgent, app = navigator.appVersion;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+if(isiOS && screen.height == 812){
+    $('#cws').css("margin-top","12%");
+    $('.fxbc').css("padding","0 15px");
+};
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var img=new Image(); 
+function hechen(){
+	var timeStamp = +new Date();
+	img.setAttribute('crossOrigin', 'anonymous');
+    img.onload=function(){};  
+    img.onerror=function(){};  
+    img.src="${obj.pic?!'http://dgtt.besttoptoday.com/series/list/20182/53BktexfJF.jpg'}"+'?'+timeStamp;
+    percent = 212;
+    
+    var img_head=new Image();  
+    img_head.setAttribute('crossOrigin', 'anonymous');
+    img_head.onload=function(){};  
+    img_head.onerror=function(){}; 
+    img_head.src="${obj.head_img?!'http://dgtt.besttoptoday.com/series/list/20182/KBahCTZtaB.png'}"+'?'+timeStamp;  
+    percent = 144;
+    
+    var img_qr=new Image();  
+    img_qr.setAttribute('crossOrigin', 'anonymous');
+    img_qr.onload=function(){};  
+    img_qr.onerror=function(){};  
+    img_qr.src="../images/loverQr.jpg";
+    //"http://dgtt.besttoptoday.com/series/list/20182/S7c6ndjYxM.png"+'?'+timeStamp;
+    percent = 72;
+    
+    var str = $('.ta_name').val();
+    img.onload = function() {
+    	if (str.length == 6 ) {
+            str = "     " + str;
+        }
+        if (str.length == 5 ) {
+            str = "     " + str;
+        }
+        if (str.length == 4 ) {
+            str = "      " + str;
+        }
+        if (str.length == 3 ) {
+            str = "       " + str;
+        }
+        if (str.length == 2 ) {
+            str = "        " + str;
+        }
+        if (str.length == 1 ) {
+            str = "        "+str;
+        }
+        
+        ctx.drawImage(img,0,0);
+        ctx.font="38px SimSun";
+        //ctx.fillStyle  = 'red';
+        ctx.fillText(str,325,121);
+        
+        //拼头像
+        ctx.save(); // 保存当前ctx的状态
+        ctx.beginPath();
+        ctx.arc(170, 140, 60, 0, 2*Math.PI);
+        ctx.lineWidth=10;
+        //ctx.strokeStyle="#E07984";//新年
+        ctx.strokeStyle="#D97C9B";//情人节
+        ctx.stroke();
+        ctx.clip(); //裁剪上面的圆形
+        ctx.drawImage(img_head, 110, 80, 120, 120); // 在刚刚裁剪的园上画图
+        ctx.restore(); // 还原状态
+        ctx.drawImage(img_qr, 290, 1075, 167, 167);
+        var t1 = window.setTimeout(function(){
+        	percent = 0;
+          	 clearTimeout(t1);//去掉定时器  
+		},1500);//使用字符串执行方法  
+        
+        
+        var cws=document.getElementById("cws");
+        var srcwd = c.toDataURL();
+        cws.src = srcwd; 
+    };
+};
+$('.sc_bbt').click(function(){
+	 var name = $('.ta_name').val();
+     if(name != ''){
+    	 $('.tc_con').show();
+    	 //var t2 = window.setTimeout(function(){
+    		 		 djs();
+                	// clearTimeout(t2);//去掉定时器  
+     	//},1500);//使用字符串执行方法  
+ 		 hechen();
+         $('.df_name').text($('.ta_name').val());
+	 };
+});
+
+$('.zw_yc').click(function(){
+	location.reload();
+});
+</script>
+    <script>
+        
+    </script>
+</body>
+</html>

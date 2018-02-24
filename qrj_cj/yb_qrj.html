@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>情人节活动</title>
+<meta name="MobileOptimized" content="320"/>
+<meta http-equiv="cleartype" content="on">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no" />
+<meta name="msapplication-tap-highlight" content="no"/>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-2.1.0.min.js"></script>
+<style>
+    html, body{-webkit-overflow-scrolling: touch;} 
+    body {font-size: 14px;color:#000; margin: 0; padding: 0;max-width: 780px;margin: 0 auto;background: url(images/sy_bj.png) left top no-repeat;background-size: 100% 100%;overflow-y: auto;overflow-x: hidden;} 
+    .wrap{width: 100%;height: 100%;box-sizing: border-box;margin: 0 auto;max-width: 780px;}
+    i{font-style: normal;}
+    .cf:before,.cf:after{content:""; display: block; }
+	.cf:after {clear: both;}
+	.cf { *zoom: 1;}
+    a{text-decoration: none;}
+    ::-webkit-input-placeholder{ /* WebKit browsers */
+        color: #999999;
+        opacity: 1;
+    }
+    :-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+        color: #999999;
+        opacity: 1;
+    }
+    ::-moz-placeholder{ /* Mozilla Firefox 19+ */
+        color: #999999;
+        opacity: 1;
+    }
+    :-ms-input-placeholder{ /* Internet Explorer 10+ */
+        color: #999999;
+        opacity: 1;
+    }
+    .wrap .sy_m{width: 100%;height: auto;box-sizing: border-box;position: relative;z-index: 22;}
+    .wrap .jjl_d{width: 100%;height: auto;box-sizing: border-box;position: relative;}
+    .wrap .jjl_d .sy_dt{width: 100%;height: auto;display: block;border: none;}
+    .wrap .x_xx{width: 80px;height: auto;display: block;border: none;}
+
+    .wrap .xin{width: 100%;height: auto;box-sizing: border-box;padding: 30px 80px 0 15px;position: relative;margin-top: 50px;}
+    .wrap .b_inp{width: 100%;height: auto;box-sizing: border-box;background: url(images/sr_mz.png) center center no-repeat;padding: 0 45px;background-size: 100% 100%;}
+    .wrap .b_inp input{background: none;border: none;line-height: 40px;width: 100%;height: auto;text-align: center;font-size: 18px;}
+    .wrap .xin .x_qh{width: 200px;height: auto;display: block;border: none;margin-left: -8px;}
+    .wrap .anniu{width: 100%;height: auto;box-sizing: border-box;padding: 0 85px;padding-top: 65px;position: relative;}
+    .wrap .anniu .sc_bbt{display: inline-block;}
+    .wrap .anniu .sc_bbt img{width: 100%;height: auto;display: block;}
+    .wrap .anniu .xixin{width: 100%;height: auto; position: absolute;left: 20px; top: 10px;}
+    .wrap .anniu .xixin img{width: 120px;height: auto;display: block;border: none;margin: 0 auto;}
+    
+    .x_xf{position: absolute;right: 15.5%;top: 80%;}
+    .x_xf{ animation:xc 3s linear infinite;-webkit-animation:xc 3s linear infinite;}
+    @-webkit-keyframes xc{
+        0%  {right:15.5%; top:80%;}
+        50% {right:16%; top:79.5%;}
+        100%{ right:15.5%; top:80%;}
+    };
+    .xixin{position: absolute;left: 20px; top: 5px;}
+    .xixin{ animation:xxc 3s linear infinite;-webkit-animation:xxc 3s linear infinite;}
+    @-webkit-keyframes xxc{
+        0%  {left: 20px; top: 5px;}
+        50% {left: 16px; top: 7px;}
+        100%{left: 20px; top: 5px;}
+    };
+    
+    
+    
+    
+</style>
+</head>
+<body>
+    <div class="wrap" style="display:block;">
+        <div class="sy_m" style="display:block;">
+            <div class="jjl_d cf">
+                <img src="images/qrj_sy.png" alt="" class="sy_dt">
+                <div class="x_xf">
+                    <img src="images/yd_xxx.png" alt="" class="x_xx">
+                </div>
+            </div>
+            <div class="xin">
+                <div class="b_inp">
+                    <input type="text" placeholder="请输入TA的名字" class="ta_name" maxlength="6" onblur="hechen()">
+                </div>
+                <div class="bb_qh">
+                    <img src="images/bb_qh.png" alt="" class="x_qh">
+                </div>
+            </div>
+            <div class="anniu">
+                <div class="xixin">
+                    <img src="images/an_xx.png" alt="">
+                </div>
+                <a href="javascript:;" class="sc_bbt"><img src="images/bb_an.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <style>
+        .tc_con{width: 100%;height: 100%;background: rgba(0,0,0,0.6);position: fixed;left: 0;top: 0;z-index: 999;}
+        .img_jz{background: url(images/jiazai.png) center center no-repeat;background-size: 100% 100%;width: 300px;height: 288px;margin: 0 auto;position: relative;top: 20%;}
+        .img_jz2{width: 300px;height: 288px; position:absolute;clip:rect(288px 300px 288px 0px);display: block;}
+        @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { 
+        .masked{
+                width: 100%;
+                text-align: center;
+                font-size: 22px;
+                position: absolute;
+                bottom: -70px;
+                background-image: -webkit-linear-gradient(left, #fff, #cc0033 25%, #fff 50%, #cc0033 75%, #fff);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                -webkit-background-size: 200% 100%;
+                -webkit-animation: masked-animation 5s infinite linear;
+            z-index: 33;
+                }
+            }
+            @-webkit-keyframes masked-animation {
+                0%  { background-position: 0 0;}
+                100% { background-position: -100% 0;}
+            }
+    </style>
+    <div class="tc_con" style="display:none;">
+        <div class="img_jz">
+            <img src="images/jiazaiz.png" alt="" class="img_jz2" id="img_jz2">
+            <p class="masked">l o a d i n g<br>. . .</p>
+        </div>
+    </div>
+    <style>
+        .fxbc{width: 100%;height: 100%;padding: 0 50px;box-sizing: border-box;position: fixed;left: 0;top: 0;background: rgba(0,0,0,0.5);z-index: 999;}
+        .fxbb{width: 100%;height: auto;position: relative;left: 0;top: 0;z-index: 9999;}
+        .ccs{width: 100%;height: 100%;position: fixed;}
+        #cws{width: 100%;height: auto;display: block;border: none;position: absolute;z-index: 999999;opacity: 0;bottom: 0;}
+        .xians{width: 100%;height: auto;display: block;border: none;}
+        .yh_tx{width: 50px;height: auto;border: 2px solid #D97C9B;border-radius: 100%;position: absolute;left: 13%;top: 4.4%;}
+        .yh_tx img{width: 100%;height: auto;border-radius: 100%;display: block;}
+        .df_name{width: 50%;font-size:14px;font-family: SimSun;color: #666666;position: absolute;right:13.5%;top: 5.7%;text-align: center;}
+        .erwm{width: 100%;height: auto;position: absolute;left: 0;bottom: 14.4%;}
+        .erwm img{width: 60px;height: auto;display: block;border: none;margin: 0 auto;}
+        .zw_yc{display: inline-block;width: 100%;height: auto;padding: 0 80px;position: absolute;bottom: 5.5%;box-sizing: border-box;z-index: 9999999;}
+        .zw_yc img{width: 100%;height: auto;display: block;border: none;}
+    </style>
+    <div class="fxbc" style="display:none;">
+        <div class="fxbb">
+            <div class="ccs">
+                <img src="" alt="" id="cws">
+            </div>
+            <img src="images/hhll.png" alt="" class="xians">
+            <div class="yh_tx">
+                <img src="images/aa.jpg" alt="">
+            </div>
+            <p class="df_name">我就是我</p>
+            <div class="erwm">
+                <img src="images/aqr.jpg" alt="">
+            </div>
+            <a href="javascript:;" class="zw_yc"><img src="images/zwyc.png" alt=""></a>
+        </div>
+    </div>
+    <canvas id="myCanvas" width="750" height="1334" style="border:1px solid #d3d3d3;display:none;">您的浏览器不支持 HTML5 canvas 标签。</canvas>
+<script>  
+var u = navigator.userAgent, app = navigator.appVersion;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+if(isiOS && screen.height == 812){
+    $('#cws').css("margin-top","12%");
+    $('.fxbc').css("padding","0 15px");
+};
+    
+var img_jz2 = document.getElementById("img_jz2");
+var dizeng =288;
+function djs(){
+    time = setInterval(function(){
+        dizeng-=10;
+        img_jz2.style.clip="rect("+dizeng+"px,300px,288px,0px)";
+        if(dizeng <= 0){
+            clearInterval(time);
+        };
+    },500);
+};
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var img=new Image();
+function hechen(){
+    img.onload=function(){};  
+    img.onerror=function(){};  
+    img.src="images/a.jpg";
+    //function show(){};  
+    //window.onload=show;  
+    var img_head=new Image();  
+    img_head.onload=function(){};  
+    img_head.onerror=function(){}; 
+    img_head.src="${obj.head_img}";  
+    img_head.src="https://pic3.zhimg.com/80/v2-e2ae9159cf260da0ae61951bf1926abe_hd.jpg";
+    img_head.src="images/aa.jpg";
+    //function show(){};  
+    //window.onload=show;  
+    var img_qr=new Image();  
+    img_qr.onload=function(){};  
+    img_qr.onerror=function(){};  
+    img_qr.src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=151721" +
+            "6896438&di=4ae65e455700196c973eb795eac24760&imgtype=0&src=http%3A%2F%2Fimgsr" +
+            "c.baidu.com%2Fforum%2Fw%253D580%2Fsign%3D53aca9868718367aad897fd51e718b68%2F" +
+            "513d269759ee3d6db606e36442166d224e4ade59.jpg";  
+    img_qr.src="images/aqr.jpg";
+    //function show(){};  
+    //window.onload=show; 
+    var str = $('.ta_name').val();
+    img.onload = function() {
+        if (str.length == 6 ) {
+            str = "          " + str;
+        }
+        if (str.length == 5 ) {
+            str = "           " + str;
+        }
+        if (str.length == 4 ) {
+            str = "             " + str;
+        }
+        if (str.length == 3 ) {
+            str = "              " + str;
+        }
+        if (str.length == 2 ) {
+            str = "               " + str;
+        }
+        if (str.length == 1 ) {
+            str = "                 "+str;
+        };
+        ctx.drawImage(img,0,0);
+        ctx.font="38px SimSun";
+        //ctx.fillStyle  = 'red';
+        ctx.fillText(str,265,121);
+    //    alert(str);
+        //拼头像
+        ctx.save(); // 保存当前ctx的状态
+        ctx.beginPath();
+        ctx.arc(170, 140, 60, 0, 2*Math.PI);
+        ctx.lineWidth=10;
+        //ctx.strokeStyle="#E07984";//新年
+        ctx.strokeStyle="#D97C9B";//情人节
+        ctx.stroke();
+        ctx.clip(); //裁剪上面的圆形
+        ctx.drawImage(img_head, 110, 80, 120, 120); // 在刚刚裁剪的园上画图
+        ctx.restore(); // 还原状态
+        ctx.drawImage(img_qr, 290, 1075, 167, 167);
+    };
+};
+    hechen();
+$('.sc_bbt').click(function(){
+    $('.ta_name').blur();
+    var name = $('.ta_name').val();
+    if(name == ''){
+        $('.ta_name').focus();
+    }else{
+        djs();
+        $('.df_name').text($('.ta_name').val());
+        $('.ta_name').blur();
+        $('.tc_con').show();
+        setTimeout(function(){
+            var cws=document.getElementById("cws");
+            var srcwd = c.toDataURL();
+            cws.src = srcwd; 
+        },1500);
+        setTimeout(function(){
+            $('.tc_con').hide();
+            $('.fxbc').show();
+        },10000);
+    };
+});
+$('.zw_yc').click(function(){
+    $('.fxbc').hide();
+});
+</script>
+   
+</body>
+</html>
